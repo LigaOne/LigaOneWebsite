@@ -1,0 +1,9 @@
+{
+  "name": "liga-one-website",
+  "private": true,
+  "description": "LIGA ONE Landingpage – statische Seite mit Vercel-Funktion für das Kontaktformular",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

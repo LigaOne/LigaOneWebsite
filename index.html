@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIGA ONE Consulting GmbH — Training &amp; Coaching, das wirkt</title>
+<meta name="description" content="LIGA ONE Consulting begleitet Führungskräfte, Teams und Organisationen in Führung, Vertrieb, mentaler Stärke und moderner Zusammenarbeit.">
+<link rel="icon" href="Bilder_website/liga-one-logo-full.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Oswald:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-main:#F7F8FA;
+    --bg-white:#FFFFFF;
+    --text-primary:#253340;
+    --text-body:#4A4A4A;
+    --text-secondary:#5B6E7F;
+    --bg-dark:#485666;
+    --header-bg:#849AA8;
+    --blue-grey:#99AABA;
+    --bg-soft-bluegrey:#EDF1F5;
+    --bg-page2:#E9EDF1;
+    --accent-red:#C00827;
+    --red-secondary:#D93C55;
+    --red-dark:#8B1A2D;
+    --bg-soft-red:#FAE8EB;
+    --white:#FFFFFF;
+    --max-w:1240px;
+    --radius-card:20px;
+    --radius-img:24px;
+    --radius-btn:10px;
+    --shadow-soft:0 16px 40px rgba(26,37,48,0.08);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg-main);
+    color:var(--text-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  section{position:relative;}
+
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+  @media(min-width:768px){.wrap{padding:0 48px;}}
+  @media(min-width:1200px){.wrap{padding:0 64px;}}
+
+  .kicker{
+    display:inline-block;
+    font-weight:600;
+    font-size:clamp(12px,1vw,14px);
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:var(--accent-red);
+    margin-bottom:16px;
+  }
+  .kicker.on-dark{color:#F0AEB8;}
+
+  h1,h2,h3,h4{margin:0;color:var(--text-primary);font-weight:800;}
+  .h2-section{font-size:clamp(32px,4vw,56px);line-height:1.12;letter-spacing:-1.2px;}
+  .h3-normal{font-size:clamp(26px,2.6vw,40px);line-height:1.2;letter-spacing:-0.5px;font-weight:700;}
+  .h4-card{font-size:clamp(20px,1.6vw,26px);line-height:1.25;font-weight:700;}
+
+  .subheadline{
+    font-weight:500;
+    font-size:clamp(17px,1.4vw,23px);
+    line-height:1.4;
+    color:var(--text-secondary);
+    max-width:760px;
+  }
+  .body-text{font-size:clamp(16px,1vw,18px);line-height:1.65;color:var(--text-body);}
+  .on-dark{color:#FFFFFF;}
+  .on-dark .subheadline{color:#D7DEE5;}
+  .on-dark .body-text{color:#DDE3E9;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:clamp(15px,1vw,17px);letter-spacing:0.4px;
+    padding:16px 30px;border-radius:var(--radius-btn);
+    border:1.5px solid transparent;
+    cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease;
+  }
+  .btn-primary{background:var(--accent-red);color:#fff;}
+  .btn-primary:hover{background:var(--red-dark);}
+  .btn-secondary{background:transparent;color:var(--text-primary);border-color:var(--text-primary);}
+  .btn-secondary:hover{background:var(--text-primary);color:#fff;}
+  .btn-secondary.on-dark{color:#fff;border-color:#fff;}
+  .btn-secondary.on-dark:hover{background:#fff;color:var(--text-primary);}
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;justify-content:center;}
+  .btn-row.left{justify-content:flex-start;}
+
+  .section-head{margin-bottom:56px;max-width:780px;}
+  .section-head .h2-section{margin-bottom:20px;}
+  .section-pad{padding:104px 0;}
+  @media(max-width:900px){.section-pad{padding:76px 0;}}
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--header-bg);
+    width:100%;
+  }
+  .nav-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:20px;height:68px;}
+  @media(min-width:768px){.nav-row{height:84px;}}
+  .logo-link{display:inline-flex;align-items:center;grid-column:1;}
+  .logo-img{
+    display:block;width:auto;height:auto;
+    max-width:110px;max-height:52px;object-fit:contain;
+  }
+  @media(min-width:768px){.logo-img{max-width:140px;max-height:64px;}}
+  nav.main-nav{
+    grid-column:2;
+    display:flex;align-items:center;
+    justify-content:flex-start;
+    padding-left:0;
+    gap:16px;
+  }
+  @media(min-width:1200px){nav.main-nav{gap:24px;padding-left:clamp(0px,2vw,40px);}}  /* Platz für sechs Menüpunkte inkl. PROJEKTE */
+  nav.main-nav a{
+    position:relative;
+    font-weight:500;font-size:15px;color:#FFFFFF;
+    letter-spacing:0.5px;text-transform:uppercase;
+    transition:color .15s ease;white-space:nowrap;
+    padding-bottom:8px;
+  }
+  @media(min-width:1200px){nav.main-nav a{font-size:16px;}}
+  nav.main-nav a:hover,
+  nav.main-nav a.active{color:var(--accent-red);}
+  nav.main-nav a.active::after{
+    content:'';position:absolute;left:50%;bottom:0;
+    transform:translateX(-50%);width:22px;height:2px;
+    background:var(--accent-red);border-radius:2px;
+  }
+  nav.main-nav a.nav-2line{
+    display:flex;flex-direction:column;align-items:center;
+    text-align:center;line-height:1.2;gap:1px;
+  }
+  nav.main-nav a.nav-2line span{display:block;}
+  nav.main-nav a[href="#start"].active::after{display:none;}
+  .nav-links{display:none;}
+  @media(min-width:1080px){.nav-links{display:flex;}}
+  .header-actions{display:none;grid-column:3;align-items:center;gap:14px;}
+  @media(min-width:1080px){.header-actions{display:flex;}}
+  .header-cta{display:inline-flex;}
+  .header-linkedin{display:inline-flex;width:34px;height:34px;color:#0A66C2;transition:color .18s ease,transform .18s ease;}
+  .header-linkedin svg{width:100%;height:100%;}
+  .header-linkedin .li-glyph{transition:fill .18s ease;}
+  .header-linkedin:hover{color:#004182;transform:translateY(-1px);}
+  .btn-gold{
+    background:var(--accent-red);color:#FFFFFF;font-weight:700;
+    font-size:14px;letter-spacing:1px;text-transform:uppercase;
+    padding:13px 26px;border-radius:999px;border:none;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:background .18s ease;white-space:nowrap;
+  }
+  .btn-gold:hover{background:var(--red-dark);}
+  .menu-toggle{
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:40px;height:40px;background:none;border:none;cursor:pointer;
+    justify-self:end;grid-column:3;
+  }
+  @media(min-width:1080px){.menu-toggle{display:none;}}
+  .menu-toggle span{display:block;height:2px;background:#fff;border-radius:2px;}
+  .mobile-panel{
+    display:none;flex-direction:column;gap:2px;
+    background:#fff;border-top:1px solid rgba(37,51,64,0.08);
+    padding:8px 24px 20px;
+  }
+  .mobile-panel.open{display:flex;}
+  .mobile-panel a{
+    padding:12px 0;font-weight:500;font-size:15px;letter-spacing:0.4px;
+    text-transform:uppercase;color:var(--text-primary);
+    border-bottom:1px solid rgba(37,51,64,0.06);
+  }
+  .mobile-panel a.active{color:var(--accent-red);}
+  .mobile-panel .btn-gold{margin-top:16px;width:100%;}
+  @media(min-width:1080px){.mobile-panel{display:none !important;}}
+
+  /* ===== WIDE IMAGE BANDS ===== */
+  .wide-image-section{padding:0 0 64px;background:var(--bg-main);}
+  @media(min-width:1024px){.wide-image-section{padding:0 0 96px;}}
+  /* Seite 2 (drei Formate + Claim) auf eigenem, sehr hellem Grau; Oberkante mittig im Abstand zu Seite 1 */
+  .wide-image-section.camera{position:relative;z-index:1;margin-top:24px;padding-top:24px;padding-bottom:6px;background:var(--bg-page2);}
+  .wide-image-section.mountain{padding-top:64px;}
+  @media(min-width:1024px){.wide-image-section.mountain{padding-top:120px;padding-bottom:120px;}}
+  .wide-image{
+    max-width:1240px;margin:0 auto;border-radius:24px;overflow:hidden;
+    border:1px solid rgba(37,51,64,0.10);box-shadow:var(--shadow-soft);
+    height:280px;
+  }
+  @media(min-width:768px){.wide-image{height:340px;}}
+  @media(min-width:1024px){.wide-image{height:440px;}}
+  @media(min-width:1024px){.wide-image-section.camera .wide-image{height:380px;}}
+  .wide-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
+
+  /* ===== Fokus: drei Formate ===== */
+  .our-focus-rest{padding-top:0;}
+  .wide-image-section.camera .wide-image{position:relative;}
+  .focus-overlay{
+    position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);
+    gap:8px;padding:0;background:var(--bg-page2);border-radius:inherit;overflow:hidden;
+  }
+  .focus-card{
+    position:relative;overflow:hidden;border-radius:14px;container-type:inline-size;
+  }
+  .focus-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .focus-card::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(12,18,26,0.55) 0%,rgba(12,18,26,0.18) 50%,rgba(12,18,26,0.3) 100%);
+  }
+  .focus-card-text{
+    position:absolute;left:0;right:0;top:10%;z-index:1;padding:0 12px;
+    display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:#FFFFFF;
+  }
+  .focus-card-label{
+    font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;white-space:nowrap;
+    letter-spacing:0.02em;line-height:1;font-size:clamp(26px,13cqi,76px);
+    text-shadow:0 2px 18px rgba(0,0,0,0.25);
+  }
+  @media(max-width:767px){
+    .focus-overlay{grid-template-columns:1fr;grid-template-rows:repeat(3,1fr);gap:6px;}
+    .focus-card{border-radius:10px;}
+    .focus-card-text{top:50%;transform:translateY(-50%);gap:4px;}
+    .focus-card-label{font-size:clamp(30px,9.5cqi,38px);}
+    .focus-card::after{background:rgba(12,18,26,0.45);}
+    .focus-card img{object-position:50% 35% !important;}
+  }
+
+  /* ===== OUR FOCUS ===== */
+  .our-focus{background:var(--bg-page2);padding:0 0 48px;text-align:center;}
+  .our-focus.our-focus-rest{background:var(--bg-main);padding-bottom:0;}
+  .focus-kicker-row{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin-bottom:6px;
+  }
+  @media(min-width:768px){.focus-kicker-row{margin-bottom:8px;}}
+  @media(min-width:1024px){.focus-kicker-row{margin-bottom:9px;}}
+  .focus-kicker-line{height:1px;width:30px;background:#C5D6E7;flex:0 0 auto;}
+  @media(min-width:768px){.focus-kicker-line{width:44px;}}
+  @media(min-width:1024px){.focus-kicker-line{width:56px;}}
+  .our-focus .kicker{
+    margin-bottom:0;font-weight:700;
+    font-size:clamp(26px,1.8vw,30px);letter-spacing:4.8px;
+  }
+  .focus-claim{
+    margin:0;text-align:center;color:#253340;font-weight:700;text-transform:uppercase;
+    line-height:1.1;letter-spacing:0.08em;
+    font-size:clamp(24px,2.33vw + 17px,52px);
+  }
+  .focus-claim.loose{font-size:clamp(22px,2.22vw + 15px,48px);}
+  .focus-sub{
+    margin:0;text-align:center;color:#4A4A4A;font-weight:300;text-transform:uppercase;
+    line-height:1.1;letter-spacing:0.12em;
+    font-size:clamp(18px,1.67vw + 13px,38px);
+  }
+  .focus-sub{margin-top:14px;}
+  .focus-claim.loose{margin-top:16px;}
+  @media(min-width:768px){
+    .focus-sub{margin-top:18px;}
+    .focus-claim.loose{margin-top:21px;}
+  }
+  @media(min-width:1024px){
+    .focus-sub{margin-top:21px;}
+    .focus-claim.loose{margin-top:26px;}
+  }
+  .focus-claim-spaced{
+    display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;
+  }
+  @media(min-width:768px){.focus-claim-spaced{gap:10px;}}
+  @media(min-width:1024px){.focus-claim-spaced{gap:14px;}}
+  .focus-dot{
+    width:5px;height:5px;border-radius:50%;background:#C00827;flex:0 0 auto;
+  }
+  @media(min-width:768px){.focus-dot{width:6px;height:6px;}}
+  @media(min-width:1024px){.focus-dot{width:8px;height:8px;}}
+  .focus-end-dot{color:var(--accent-red);}
+  /* TRAINING · COACHING · CONSULTING leuchten nacheinander im LIGA-ONE-Rot auf (Endlosschleife) */
+  .focus-claim-spaced > span:not(.focus-dot){animation:focus-word-glow 4.5s ease-in-out infinite;}
+  .focus-claim-spaced > span:nth-of-type(3){animation-delay:1.5s;}
+  .focus-claim-spaced > span:nth-of-type(5){animation-delay:3s;}
+  @keyframes focus-word-glow{
+    0%,38%,100%{color:#253340;}
+    9%,29%{color:var(--accent-red);}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .focus-claim-spaced > span:not(.focus-dot){animation:none;}
+  }
+
+  /* ===== Referenzen-Logoband ===== */
+  .our-focus-spacer{height:16px;}
+  @media(min-width:768px){.our-focus-spacer{height:18px;}}
+  @media(min-width:1024px){.our-focus-spacer{height:20px;}}
+  .logo-refs{background:var(--bg-main);padding:52px 0;}  /* gleiches Hellgrau wie der Fokus-Bereich darüber */
+  @media(min-width:768px){.logo-refs{padding:64px 0;}}
+  @media(min-width:1024px){.logo-refs{padding:76px 0;}}
+  .logo-refs-title{
+    margin:0 0 32px;padding:0 24px;text-align:center;
+    /* gleiche Typo wie „RESULTS THAT LAST.“ (.focus-claim.loose) */
+    font-family:'Inter',sans-serif;font-weight:700;color:#253340;text-transform:uppercase;
+    font-size:clamp(22px,2.22vw + 15px,48px);line-height:1.1;letter-spacing:0.08em;
+  }
+  @media(min-width:768px){.logo-refs-title{margin-bottom:38px;}}
+  @media(min-width:1024px){.logo-refs-title{margin-bottom:44px;}}
+  .logo-marquee{
+    width:100%;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+            mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+  }
+  .logo-track{
+    --logo-gap:22px;--logo-h:38px;--logo-w:120px;
+    display:flex;align-items:center;width:max-content;white-space:nowrap;
+    padding:4px 0;
+    animation:logo-scroll 34s linear infinite;
+  }
+  .logo-marquee:hover .logo-track{animation-play-state:paused;}
+  @keyframes logo-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .logo-card{
+    flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+    min-width:160px;height:84px;padding:18px 24px;margin-right:var(--logo-gap);
+    background:#FFFFFF;border:1px solid #D8DEE5;border-radius:2px;
+    box-shadow:0 4px 14px rgba(37,51,64,0.04);
+    transition:all 0.3s ease;
+  }
+  .logo-card img{
+    display:block;margin:0 auto;width:auto;height:var(--logo-h);
+    max-height:var(--logo-h);max-width:var(--logo-w);object-fit:contain;
+    transition:all 0.3s ease;
+  }
+  .logo-card:hover{border-color:#AEB8C3;transform:translateY(-2px);}
+  @media(min-width:768px){
+    .logo-track{--logo-gap:28px;--logo-h:48px;--logo-w:140px;animation-duration:44s;}
+    .logo-card{min-width:190px;height:98px;padding:20px 26px;}
+  }
+  @media(min-width:1024px){
+    .logo-track{--logo-gap:34px;--logo-h:54px;--logo-w:150px;animation-duration:55s;}
+    .logo-card{min-width:210px;height:110px;padding:22px 30px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .logo-marquee{overflow-x:auto;}
+    .logo-track{animation:none;}
+  }
+
+  /* ===== CARDS ===== */
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  @media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.grid-4{grid-template-columns:1fr;}}
+  .grid-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media(max-width:900px){.grid-methods{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.grid-methods{grid-template-columns:1fr;}}
+
+  .card{
+    background:#fff;border-radius:var(--radius-card);padding:36px 30px;
+    border:1px solid rgba(37,51,64,0.07);
+  }
+  .card p{margin:12px 0 0;}
+  .icon-tile{
+    width:56px;height:56px;border-radius:14px;background:var(--bg-soft-bluegrey);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+  }
+  .icon-tile svg{width:26px;height:26px;stroke:var(--accent-red);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+
+  .media-card{
+    background:#fff;border-radius:var(--radius-card);overflow:hidden;
+    border:1px solid rgba(37,51,64,0.07);
+  }
+  .media-card .thumb{aspect-ratio:4/3;overflow:hidden;}
+  .media-card .thumb img{width:100%;height:100%;object-fit:cover;}
+  .media-card .thumb.icon-thumb{
+    display:flex;align-items:center;justify-content:center;background:var(--bg-soft-bluegrey);
+  }
+  .media-card .thumb.icon-thumb svg{width:52px;height:52px;stroke:var(--accent-red);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .media-card .body{padding:26px 26px 30px;}
+  .media-card .body p{margin:10px 0 0;}
+  .card-note{font-size:14px;font-weight:400;color:var(--text-secondary);margin-left:6px;letter-spacing:0;white-space:nowrap;}
+
+  /* ===== TRAINING ===== */
+  .training{background:var(--bg-soft-bluegrey);}
+  /* „BUSINESS TRAINING“ ca. 1 cm unter der Oberkante der grauen Fläche */
+  .section-pad.training,#coaching.section-pad,#methoden.section-pad{padding-top:38px;}
+  .training .section-head .kicker,#coaching .section-head .kicker,#methoden .section-head .kicker{font-size:clamp(20px,1.8vw,28px);font-weight:700;letter-spacing:2px;margin-bottom:18px;}
+  .training-intro{margin-top:0;}
+  /* breiter, damit der Einleitungstext am Desktop auf 3 Zeilen passt */
+  .training .section-head,.training .training-intro .subheadline{max-width:1000px;}
+  #coaching .section-head .subheadline{margin-top:0;}
+  #methoden .section-head .subheadline{margin-top:0;}
+  .methoden-intro{margin:14px 0 0;max-width:none;}
+  #methoden .section-head{max-width:none;margin-bottom:22px;}
+  /* Karten enden direkt unter dem Text */
+  #methoden .grid-methods{align-items:start;}
+  #methoden .media-card .body{padding-bottom:18px;}
+  /* Kontakt schliesst direkt an die Methoden-Karten an */
+  #methoden.section-pad{padding-bottom:40px;}
+  .training-intro p{margin:0 0 14px;}
+  .training-intro p:last-child{margin-bottom:0;}
+  .train-grid{align-items:stretch;}
+  /* Überschrift jeweils über der Karte */
+  .train-title{margin:0 0 14px;color:var(--text-primary);font-weight:800;letter-spacing:0.02em;
+    font-size:clamp(20px,1.5vw,24px);line-height:1.2;
+    display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;}
+  /* roter Punkt wie zwischen TRAINING · COACHING · CONSULTING */
+  .train-title::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent-red);}
+  .train-card{
+    position:relative;overflow:hidden;
+    border-radius:var(--radius-card);
+    border:1px solid rgba(37,51,64,0.07);
+    min-height:300px;flex:1 1 auto;
+    display:flex;align-items:flex-end;
+  }
+  @media(max-width:1024px){.train-card{min-height:280px;}}
+  /* alle Karten einer Reihe gleich hoch, auch wenn eine mehr Text hat */
+  .train-item{display:flex;flex-direction:column;}
+  .train-bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:blur(3px) saturate(0.92);transform:scale(1.1);
+  }
+  .train-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(30,40,52,0.12) 0%, rgba(24,32,42,0.82) 100%);
+  }
+  .train-content{position:relative;z-index:2;padding:28px 26px 30px;}
+  .train-content h3{color:#fff;margin-bottom:10px;}
+  .train-content .body-text{color:#E7EAED;font-size:15px;line-height:1.55;}
+  .train-sub{margin:0;color:#FFFFFF;font-weight:700;font-size:clamp(14px,1.15vw,16px);line-height:1.3;white-space:nowrap;}
+  .train-sub-head{margin-bottom:10px;white-space:normal;}
+  .train-sub-note{margin:2px 0 10px;color:#D3DAE1;font-size:13px;font-weight:400;font-style:italic;}
+  .train-card .train-content{padding-left:22px;padding-right:18px;}
+  /* alle Karten: Text oben beginnen (wie bei Leadership) */
+  .train-card{align-items:flex-start;}
+  .train-card .train-content > .body-text:first-child{margin-top:0;}
+  .train-card .train-content .body-text{font-size:14.5px;line-height:1.45;margin:0;}
+  .train-content .body-text + .train-list{margin-top:12px;}
+  .train-list li{position:relative;padding-left:16px;color:#E7EAED;font-size:14.5px;line-height:1.45;margin-bottom:3px;}
+  .train-list li::before{content:"";position:absolute;left:0;top:0.6em;width:6px;height:6px;border-radius:50%;background:var(--accent-red);}
+  /* Business-Training-Karten: Grundzustand = nur Bild (klar), Text ausgeblendet.
+     Text erscheint, wenn die Karte in der Lauflicht-Reihenfolge dran ist (.is-showing)
+     oder wenn die Maus darauf liegt. */
+  .train-card-reveal .train-bg{filter:none;transform:scale(1.02);transition:filter .7s ease,transform .9s ease;}
+  .train-card-reveal .train-overlay{opacity:0;transition:opacity .7s ease;}
+  .train-card-reveal .train-content{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;}
+  .train-card-reveal.is-showing .train-bg{filter:blur(3px) saturate(0.92);transform:scale(1.1);}
+  .train-card-reveal.is-showing .train-overlay{opacity:1;}
+  .train-card-reveal.is-showing .train-content{opacity:1;transform:none;transition-delay:.25s;}
+  @media(hover:hover){
+    .train-card-reveal:hover .train-bg{filter:blur(3px) saturate(0.92);transform:scale(1.1);}
+    .train-card-reveal:hover .train-overlay{opacity:1;}
+    .train-card-reveal:hover .train-content{opacity:1;transform:none;transition-delay:.15s;}
+  }
+  /* Geräte ohne Maus (Handy/Tablet): nach dem Lauflicht bleibt der Text lesbar */
+  @media(hover:none){
+    .train-grid.is-done .train-card-reveal .train-bg{filter:blur(3px) saturate(0.92);transform:scale(1.1);}
+    .train-grid.is-done .train-card-reveal .train-overlay{opacity:1;}
+    .train-grid.is-done .train-card-reveal .train-content{opacity:1;transform:none;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .train-card-reveal .train-bg,.train-card-reveal .train-overlay,.train-card-reveal .train-content{transition:none;}
+  }
+  /* alle Karten gleichmässig abdunkeln, damit der Text oben gut lesbar ist */
+  .train-card .train-overlay{background:linear-gradient(180deg,rgba(24,32,42,0.62) 0%,rgba(24,32,42,0.85) 100%);}
+
+  /* ===== ZITAT AUF WERKZEUG-BILD (wie liga-one-gmbh.ch), gleiche Masse und Schrift wie Berg- und Knotenbild ===== */
+  .tool-quote{position:relative;overflow:hidden;width:100%;height:340px;border-bottom:3px solid var(--bg-dark);}
+  @media(min-width:768px){.tool-quote{height:420px;}}
+  @media(min-width:1024px){.tool-quote{height:500px;}}
+  .tool-quote > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;}
+  .tool-quote::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg,rgba(14,22,32,0) 25%,rgba(14,22,32,0.35) 55%,rgba(14,22,32,0.55) 100%);}
+  /* Qualifizierungen laufen im unteren Teil des Werkzeug-Bildes von rechts nach links */
+  /* Handy: Zitat und Laufband untereinander; ab Tablet: Bild in fester Höhe, Zitat im oberen Drittel, Laufband unten im Bild */
+  @media(max-width:767px){.tool-quote{height:auto;}.tool-quote-inner{min-height:300px;}.quali-marquee{padding-bottom:20px;}}
+  @media(min-width:768px){
+    .tool-quote .tool-quote-inner{align-items:flex-start;padding-top:44px;}
+    .tool-quote .quali-marquee{position:absolute;left:0;right:0;bottom:22px;}
+  }
+  @media(min-width:1024px){.tool-quote .tool-quote-inner{padding-top:40px;}}
+  /* so niedrig, dass beim Sprung auf METHODEN die Überschrift darunter noch sichtbar ist */
+  @media(min-width:1024px){.tool-quote{height:clamp(420px,calc(100vh - 164px),500px);}}
+  /* links früh ausblenden, damit die Werkzeuge sichtbar bleiben */
+  .quali-marquee{position:relative;z-index:2;width:100%;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 8%,#000 38%,#000 96%,transparent 100%);
+            mask-image:linear-gradient(90deg,transparent 0,transparent 8%,#000 38%,#000 96%,transparent 100%);}
+  .quali-track{display:flex;align-items:stretch;width:max-content;animation:logo-scroll 70s linear infinite;}
+  .quali-marquee:hover .quali-track{animation-play-state:paused;}
+  .quali-card{flex:0 0 auto;width:150px;margin-right:18px;padding:12px 10px 10px;background:#FFFFFF;border:1px solid #D8DEE5;border-radius:2px;
+    box-shadow:0 4px 14px rgba(37,51,64,0.10);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
+  .quali-card img{width:100%;height:72px;object-fit:contain;}
+  .quali-card span{font-size:11.5px;line-height:1.3;color:#253340;font-weight:500;}
+  @media(min-width:1024px){.quali-card{width:170px;margin-right:22px;}.quali-card img{height:84px;}.quali-card span{font-size:12.5px;}}
+  @media(prefers-reduced-motion:reduce){.quali-marquee{overflow-x:auto;}.quali-track{animation:none;}}
+  .tool-quote-inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:flex-end;box-sizing:border-box;}
+  .tool-line{margin:0;width:62%;text-align:center;color:#FFFFFF;font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;
+    letter-spacing:0.04em;line-height:1.15;font-size:clamp(18px,2vw + 6px,40px);text-shadow:0 2px 24px rgba(0,0,0,0.35);}
+  @media(min-width:900px){.tool-line{white-space:nowrap;transform:translateX(clamp(40px,8vw - 2px,113px));}}  /* ca. 3 cm nach rechts */
+  @media(max-width:640px){.tool-line{width:72%;}}
+  /* ===== ZITAT AUF KNOTEN-BILD (wie liga-one-gmbh.ch/coaching-business) ===== */
+  /* gleiche Masse wie das Bergbild (.refs-mountain): volle Breite, 340 / 420 / 500px hoch */
+  .knot-quote{position:relative;overflow:hidden;width:100%;height:340px;border-bottom:3px solid var(--bg-dark);}
+  @media(min-width:768px){.knot-quote{height:420px;}}
+  @media(min-width:1024px){.knot-quote{height:500px;}}
+  .knot-quote > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;}
+  .knot-quote::after{content:"";position:absolute;inset:0;background:rgba(14,22,32,0.22);pointer-events:none;}
+  .knot-quote-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:space-between;
+    padding-top:clamp(32px,6vw,90px);padding-bottom:clamp(28px,3.4vw,48px);box-sizing:border-box;}
+  /* gleiche Schrift wie „WOFÜR BIST DU HIER?“ im Bergbild (.mountain-question) */
+  .knot-line{margin:0;color:#FFFFFF;font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;
+    letter-spacing:0.04em;line-height:1.05;font-size:clamp(24px,2.6vw + 8px,52px);
+    text-shadow:0 2px 24px rgba(0,0,0,0.35);}
+  .knot-line-2{text-align:right;}
+  /* ===== PROJEKTE: Kamera-Bild mit „Projekte im Fokus“, gleiche Masse und Schrift wie Knoten- und Werkzeugbild ===== */
+  .projekte-quote{position:relative;overflow:hidden;width:100%;height:340px;border-bottom:3px solid var(--bg-dark);}
+  @media(min-width:768px){.projekte-quote{height:420px;}}
+  @media(min-width:1024px){.projekte-quote{height:500px;}}
+  .projekte-quote > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;}
+  .projekte-quote::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg,rgba(14,22,32,0) 45%,rgba(14,22,32,0.30) 65%,rgba(14,22,32,0.50) 100%);}
+  .projekte-quote-inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:flex-end;box-sizing:border-box;}
+  .projekte-line{margin:0;text-align:right;color:#FFFFFF;font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;
+    letter-spacing:0.04em;line-height:1.05;font-size:clamp(24px,2.6vw + 8px,52px);text-shadow:0 2px 24px rgba(0,0,0,0.35);}  /* gleiche Grösse wie „WOFÜR BIST DU HIER?“ */
+  #projekte.section-pad{padding-top:38px;}
+  #projekte .section-head{max-width:900px;}
+  #projekte .section-head .subheadline{margin:0 0 16px;max-width:none;}
+  .projekte-intro{margin:0 0 12px;}
+  /* Projekt-Kacheln: kompakt, kleine Schrift */
+  .projekt-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px;}
+  @media(min-width:700px){.projekt-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1024px){.projekt-grid{grid-template-columns:repeat(3,1fr);gap:22px;}}
+  .projekt-card{background:#FFFFFF;border:1px solid #D8DEE5;border-radius:16px;padding:20px 22px 22px;
+    box-shadow:0 4px 14px rgba(37,51,64,0.05);display:flex;flex-direction:column;}
+  .projekt-logo{height:36px;width:auto;max-width:150px;object-fit:contain;object-position:left center;margin-bottom:14px;}
+  @media(min-width:1024px){.projekt-col3{grid-column:3;}}  /* steht unter der oberen Athlon-Kachel */
+  .projekt-logo-square{height:48px;margin-top:-6px;margin-bottom:8px;}
+  .projekt-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+  .projekt-tags li{font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:#253340;
+    background:#EDF1F5;border-radius:999px;padding:4px 10px;}
+  .projekt-tags li.is-branche{background:#253340;color:#FFFFFF;}
+  .projekt-tags li.is-highlight{background:var(--accent-red);color:#FFFFFF;}
+  .projekt-card h3{margin:0 0 8px;font-size:14.5px;line-height:1.4;font-weight:700;color:#253340;}
+  .projekt-card p{margin:0;font-size:13.5px;line-height:1.5;color:var(--text-body);}
+  .projekt-card p.projekt-formel{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:0.01em;color:var(--accent-red);}
+  .projekt-card p + p{margin-top:8px;}
+  .projekt-points{margin-top:8px;display:flex;flex-direction:column;gap:7px;}
+  .projekt-points li{position:relative;padding-left:15px;font-size:13.5px;line-height:1.45;color:var(--text-body);}
+  .projekt-points li::before{content:"";position:absolute;left:0;top:0.55em;width:6px;height:6px;border-radius:50%;background:var(--accent-red);}
+  .projekt-points strong{color:#253340;font-weight:700;}
+  .projekt-card p strong{color:var(--accent-red);font-weight:600;}
+  #projekte .section-head .kicker{font-size:clamp(20px,1.8vw,28px);font-weight:700;letter-spacing:2px;margin-bottom:18px;}
+  /* Bergbild hinter dem Logoband: Logos im oberen Drittel, Frage unten rechts */
+  /* randlos über die volle Breite, wie das Schuh-Bild im Kontaktbereich */
+  .logo-refs{padding-bottom:0 !important;}
+  .refs-mountain{position:relative;height:340px;max-width:none;border-radius:0;border:0;border-bottom:3px solid var(--bg-dark);box-shadow:none;}
+  @media(min-width:768px){.refs-mountain{height:420px;}}
+  @media(min-width:1024px){.refs-mountain{height:500px;}}
+  .refs-mountain::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 65% 75% at 100% 100%,rgba(14,22,32,0.6),rgba(14,22,32,0) 70%),
+      linear-gradient(180deg,rgba(14,22,32,0.25) 0%,rgba(14,22,32,0) 40%);
+  }
+  .refs-mountain .logo-marquee{position:absolute;left:0;right:0;top:7%;z-index:2;}
+  .mountain-question{
+    position:absolute;right:5%;bottom:8%;z-index:2;margin:0;max-width:90%;
+    text-align:right;color:#FFFFFF;font-family:'Inter',sans-serif;font-weight:800;
+    text-transform:uppercase;letter-spacing:0.04em;line-height:1.05;
+    font-size:clamp(24px,2.6vw + 8px,52px);
+    text-shadow:0 2px 24px rgba(0,0,0,0.35);
+  }
+
+  /* ===== COACHING ===== */
+  /* Coaching-Themen als Kacheln – Gestaltung nach perinova.com/perinova-voice-agent-de (Blurbs) */
+  #coaching .section-head{margin-bottom:18px;}
+  .coach-cards{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:22px;}
+  @media(max-width:1024px){.coach-cards{grid-template-columns:repeat(2,1fr);gap:18px;}}
+  @media(max-width:640px){.coach-cards{grid-template-columns:1fr;}}
+  /* Kachel wie bei „Methoden“: oben Bild (flacher), unten Text; Hover wird grau wie die Kopfzeile */
+  .coach-card{
+    display:flex;flex-direction:column;overflow:hidden;
+    background:#FFFFFF;border-radius:var(--radius-card);border:1px solid rgba(37,51,64,0.07);
+    box-shadow:0 2px 14px rgba(37,51,64,0.08);
+    transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease;
+  }
+  .coach-card-img{display:block;width:100%;aspect-ratio:3/1;height:auto;object-fit:cover;object-position:60% 40%;}
+  .coach-card-text{padding:18px 22px 22px;}
+  .coach-card:hover{background:var(--header-bg);transform:translateY(-3px);box-shadow:0 8px 24px rgba(37,51,64,0.16);}
+  .coach-card h4{margin:0 0 6px;font-weight:700;font-size:17px;line-height:1.25;color:var(--text-primary);transition:color .3s ease;}
+  .coach-card p{margin:0;font-weight:400;font-size:15px;line-height:1.45;color:var(--text-body);transition:color .3s ease;}
+  .coach-card:hover h4,.coach-card:hover p{color:#FFFFFF;}
+  /* Beschreibung skaliert mit der Kartenbreite, damit sie höchstens zwei Zeilen braucht */
+  .coach-card{container-type:inline-size;}
+  .coach-card p{font-size:clamp(11.5px,4.15cqi,15px);}
+
+
+  /* ===== KONTAKT (nach Vorbild liga-one-gmbh.ch/kontakt) ===== */
+  .kontakt{background:var(--bg-main);padding-bottom:88px;}  /* Hellgrau wie HOME/Fokus: weisses Formular hebt sich ab */
+  .kontakt-banner{border-bottom:3px solid var(--bg-dark);}
+  .kontakt-banner img{width:100%;height:clamp(200px,34vw,490px);object-fit:cover;object-position:center 60%;}
+  /* „STEP ONE“ im Schuh-Bild, rechts neben den Schuhen (wie liga-one-gmbh.ch/kontakt) */
+  .kontakt-banner{position:relative;}
+  .step-one{
+    position:absolute;left:calc(61% + 76px);bottom:16%;  /* ca. 2 cm weiter rechts */margin:0;line-height:1;white-space:nowrap;
+    font-size:clamp(34px,5.6vw,84px);
+  }
+  .step-word{font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.01em;color:#6E8193;}
+  .one-word{
+    display:inline-block;position:relative;top:-0.62em;margin-left:-0.04em;
+    font-family:'Oswald','Inter',sans-serif;font-weight:700;color:var(--accent-red);
+    font-size:0.6em;letter-spacing:0.01em;
+  }
+  .one-o{position:relative;display:inline-block;}
+  .one-1{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);font-size:0.52em;color:#FFFFFF;}
+  @media(max-width:900px){.step-one{left:auto;right:5%;bottom:10%;}}
+  /* Kopf unter dem Schuh-Bild: wie BUSINESS COACHING (rote Überschrift + Einleitung, linksbündig) */
+  .kontakt-head{padding-top:38px;margin-bottom:40px;}
+  .kontakt-head .kicker{font-size:clamp(20px,1.8vw,28px);font-weight:700;letter-spacing:2px;margin-bottom:18px;}
+  .kontakt-head{max-width:1200px;margin-left:auto;margin-right:auto;}
+  .kontakt-head .subheadline{margin-top:0;max-width:none;}
+  .kontakt-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:1200px;margin:0 auto;}
+  @media(min-width:900px){.kontakt-grid{grid-template-columns:minmax(0,1fr) minmax(0,680px);}}
+  .kontakt-card{background:var(--header-bg);color:#FFFFFF;display:flex;flex-direction:column;padding:28px 20px 0;}
+  /* Karte so weit nach links, dass das LIGA-ONE-Logo bündig unter dem Logo der Kopfzeile sitzt (Innenabstand 20px + 14px) */
+  @media(min-width:900px){.kontakt-card{margin-left:-34px;}}
+  .kontakt-logo{width:174px;height:auto;margin:12px 0 32px 14px;}  /* zugeschnitten: sichtbare Kante bündig mit dem Logo der Kopfzeile */
+  /* Bild füllt die Karte nach unten bis auf Höhe der Unterkante von „Absenden“ (Abstand per JS gesetzt) */
+  .kontakt-card-img{margin:8px -20px var(--kc-bottom,0px);width:calc(100% + 40px);max-width:none;height:auto;min-height:220px;object-fit:contain;background:#FFFFFF;flex:1 1 0;}
+  /* Kontaktformular „L!GA ONE kennenlernen“ */
+  .kontakt-form{
+    background:#FFFFFF;border:1px solid #D8DEE5;border-radius:16px;box-shadow:0 2px 14px rgba(37,51,64,0.08);
+    padding:28px 20px;width:100%;max-width:680px;box-sizing:border-box;color:#253340;
+  }
+  @media(min-width:768px){.kontakt-form{padding:40px 44px;}}
+  .kf-title{margin:0;font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(26px,2.6vw,40px);line-height:1.15;color:#253340;letter-spacing:-0.01em;}
+  .kf-bang{color:var(--accent-red);}
+  .kf-intro{margin:14px 0 26px;font-weight:400;font-size:clamp(17px,1.2vw,18px);line-height:1.5;color:#253340;}
+  .kf-choice{border:0;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .kf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  .kf-radio{display:flex;align-items:center;gap:12px;font-weight:500;font-size:16px;color:#253340;cursor:pointer;}
+  .kf-radio input{width:20px;height:20px;margin:0;accent-color:#C00827;flex:0 0 auto;cursor:pointer;}
+  .kf-radio:has(input:checked){font-weight:700;}
+  .kf-fields{display:flex;flex-direction:column;gap:20px;}
+  .kf-field span{display:block;font-weight:500;font-size:15px;color:#253340;margin-bottom:8px;}
+  .kf-field small{font-weight:400;color:#5B6E7F;}
+  .kf-field input,.kf-field textarea{
+    width:100%;box-sizing:border-box;border:1px solid #D8DEE5;border-radius:8px;background:#FFFFFF;
+    padding:12px 14px;font:inherit;font-size:16px;color:#253340;outline:none;resize:vertical;
+    transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  .kf-field textarea{min-height:120px;}
+  .kf-field input::placeholder,.kf-field textarea::placeholder{color:#8C99A6;}
+  .kf-field input:focus,.kf-field textarea:focus{border-color:#253340;box-shadow:0 0 0 3px rgba(37,51,64,0.08);}
+  .kf-field.is-invalid input,.kf-field.is-invalid textarea{border-color:#C00827;}
+  .kf-hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
+  .kf-optin{display:flex;align-items:flex-start;gap:10px;margin:24px 0 24px;font-size:15px;line-height:1.45;color:#253340;cursor:pointer;}
+  .kf-optin input{width:18px;height:18px;margin:2px 0 0;accent-color:#C00827;flex:0 0 auto;cursor:pointer;}
+  .kf-optin a{color:#253340;text-decoration:underline;text-underline-offset:2px;}
+  .kf-optin a:hover{color:#C00827;}
+  .kf-submit{
+    display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;
+    background:#C00827;color:#FFFFFF;border:0;border-radius:var(--radius-btn);
+    font:inherit;font-weight:700;font-size:16px;letter-spacing:0.06em;cursor:pointer;transition:background .18s ease,opacity .18s ease;
+  }
+  .kf-submit:hover:not(:disabled){background:var(--red-dark);}
+  .kf-submit:disabled{opacity:.45;cursor:not-allowed;}
+  @media(max-width:560px){.kf-submit{width:100%;}}
+  .kf-status{margin:18px 0 0;font-size:16px;line-height:1.5;color:#253340;}
+  .kf-status.is-error{color:#C00827;}
+  .kf-status:empty{display:none;}
+  .kontakt-form.is-sent .kf-status{font-weight:600;}
+
+  /* ===== FOOTER: Adresse | Kontakt | Rechtliches + TÜV-Siegel, linksbündig ab Kante der Kontakt-Karte ===== */
+  .site-footer{background:var(--blue-grey);padding:32px 0 30px;color:#FFFFFF;}
+  .footer-cols{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:28px 40px;text-align:left;}
+  /* links bündig mit der Kontakt-Karte (34px weiter links als der Inhaltsbereich), rechts bündig mit dem Formular */
+  @media(min-width:900px){.footer-cols{margin-left:-34px;}}
+  .footer-col,.footer-legal > div{display:flex;flex-direction:column;align-items:center;}
+  .footer-head{text-align:center;}
+  .footer-head{margin:0 0 12px;font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(16px,1.2vw,18px);letter-spacing:0.04em;text-transform:uppercase;color:var(--accent-red);}
+  .footer-text{margin:0;font-size:clamp(14px,1vw,15px);line-height:1.6;color:#FFFFFF;}
+  .footer-brand{font-weight:700;}
+  .footer-bang{color:var(--accent-red);}
+  .footer-list{display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+  .footer-list li{display:flex;align-items:center;gap:10px;font-size:clamp(14px,1vw,15px);color:#FFFFFF;}
+  .footer-list svg{width:18px;height:18px;flex:0 0 auto;color:#FFFFFF;}
+  .footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-size:clamp(14px,1vw,15px);}
+  .footer-list a,.footer-links a{color:#FFFFFF;transition:color .15s ease;}
+  .footer-list a:hover,.footer-links a:hover{color:var(--accent-red);}
+  .footer-legal{flex-direction:row;align-items:flex-start;gap:28px;}
+  .footer-tuev{display:block;width:150px;height:auto;border-radius:3px;margin-top:2px;}
+  .footer-cert{margin:0;width:150px;}
+  .footer-cert figcaption{margin-top:6px;font-size:10px;line-height:1.35;color:#FFFFFF;opacity:.9;}
+
+  /* ===== INTRO HERO (neue erste Seite) ===== */
+  .intro-hero{
+    background:#F2F5F7;overflow:hidden;
+  }
+  .intro-hero-img{
+    position:absolute;top:0;right:-5vw;width:auto;max-width:none;height:100%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 35%);
+            mask-image:linear-gradient(to right,transparent 0,#000 35%);
+  }
+  .intro-hero-inner{position:relative;width:100%;padding-top:20px;padding-bottom:72px;}
+  .intro-hero-text{max-width:760px;}
+  .intro-kicker{
+    margin:0;font-weight:500;font-size:clamp(10px,0.85vw,12px);line-height:1.6;
+    letter-spacing:0.28em;text-transform:uppercase;color:var(--text-primary);
+  }
+  @media(min-width:901px){.intro-kicker{white-space:nowrap;}}
+  @media(max-width:1500px){.intro-kicker{letter-spacing:0.2em;}}
+  .intro-rule{display:block;width:72px;height:2px;margin:14px 0 28px;background:var(--accent-red);}
+  .intro-services{
+    margin:0;font-weight:500;font-size:clamp(16px,1.6vw,24px);
+    letter-spacing:0.22em;text-transform:uppercase;color:var(--text-primary);
+  }
+  .intro-dot{display:inline-block;width:0.3em;height:0.3em;border-radius:50%;background:var(--accent-red);vertical-align:middle;margin:0 0.6em 0 0.4em;}
+  .intro-title{
+    display:flex;flex-direction:column;align-items:flex-start;gap:0.16em;
+    font-size:clamp(40px,4vw,80px);line-height:1.04;letter-spacing:-0.045em;font-weight:800;
+    color:var(--text-primary);
+  }
+  .intro-title .t2{margin-left:1.3em;color:var(--accent-red);}
+  .intro-title .t4{margin-left:2.1em;color:#344456;white-space:nowrap;}
+  .intro-offer{display:flex;flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin:34px 0 0;font-size:clamp(40px,4vw,80px);}
+  .intro-offer > *{font-size:initial;}
+  .intro-offer-lead{margin:0 0 10px;font-size:clamp(14px,1.1vw,17px);font-weight:400;color:var(--text-primary);}
+  .intro-cta{gap:18px;padding:15px clamp(24px,3vw,52px);font-size:clamp(16px,1.35vw,22px);font-weight:600;letter-spacing:0;}
+  .intro-cta svg{width:28px;height:28px;transition:transform .18s ease;}
+  .intro-cta:hover svg{transform:translateX(4px);}
+  .intro-perks{
+    display:inline-flex;align-items:center;gap:clamp(8px,1vw,14px);margin:12px 0 0;
+    padding:6px clamp(14px,1.8vw,26px);border-radius:999px;background:rgba(232,226,214,0.55);
+    font-size:clamp(13px,0.95vw,15px);font-weight:500;color:var(--text-primary);
+  }
+  .intro-perks svg{width:20px;height:20px;color:#A98534;}
+  .intro-perks i{font-style:normal;color:#A98534;}
+  .intro-hero-inner{padding-bottom:28px;}
+  .intro-marquee{position:relative;z-index:2;padding-bottom:36px;}
+  @media(max-width:900px){
+    .intro-hero{display:block;min-height:0;}
+    .intro-hero-img{
+      position:relative;width:100%;height:clamp(320px,62vw,520px);object-position:60% 20%;
+      -webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);
+              mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);
+    }
+    .intro-hero-inner{padding-top:8px;padding-bottom:64px;}
+    .intro-hero-inner{padding-bottom:40px;}
+    .intro-marquee{position:relative;bottom:auto;padding-bottom:48px;}
+    .intro-kicker{letter-spacing:0.16em;}
+    .intro-services{letter-spacing:0.14em;}
+    .intro-title .t2{margin-left:0.8em;}
+    .intro-title .t4{margin-left:1.4em;white-space:normal;}
+    .intro-offer{margin-left:0;width:100%;}
+    .intro-cta{width:100%;}
+  }
+
+  /* ===== INTRO HERO Desktop: Bild über die volle Breite, Texte proportional wie in der Vorlage (1672×941), Textblock auf 85 % ===== */
+  @media(min-width:901px){
+    .intro-hero{height:min(49.9vw,max(45vw,calc(100svh - 84px)));padding:0;background:#EEF2F5;}
+    /* Bild in Originalproportion, um 6.4vw nach oben versetzt: Kopf auf Höhe der obersten Textzeile */
+    .intro-hero-img{
+      position:absolute;left:0;top:-6.4vw;width:100%;height:auto;max-width:none;
+      -webkit-mask-image:none;mask-image:none;
+    }
+    .intro-hero-inner{position:absolute;left:0;top:0;max-width:none;margin:0;padding:2.6vw 0 0 4.6vw;width:auto;}
+    .intro-hero-text{max-width:none;}
+    .intro-kicker{font-size:0.83vw;letter-spacing:0.175em;line-height:1.2;white-space:nowrap;}
+    .intro-services{font-size:1.72vw;letter-spacing:0.15em;line-height:1.2;margin:0;}
+    .intro-rule{width:4.9vw;height:0.16vw;margin:1.1vw 0 1.9vw;}
+    .intro-title{font-size:3.95vw;line-height:1.08;gap:0.12em;margin-left:1.35vw;}
+    .intro-title .t2{margin-left:1.8em;}
+    .intro-title .t4{margin-left:3.3em;}
+    .intro-offer{margin-top:1.95vw;font-size:inherit;}
+    .intro-offer-lead{font-size:1.07vw;margin:0 0 0.6vw;}
+    .intro-cta{
+      width:39vw;height:4.04vw;padding:0 1.7vw;border-radius:0.4vw;white-space:nowrap;
+      font-size:1.32vw;font-weight:600;gap:1.5vw;justify-content:center;
+    }
+    .intro-cta svg{width:1.8vw;height:1.8vw;}
+    .intro-perks{
+      margin-top:0.98vw;height:2.17vw;padding:0 1.87vw;gap:1.15vw;
+      font-size:0.9vw;
+    }
+    .intro-perks svg{width:1.23vw;height:1.23vw;}
+    .intro-marquee{position:absolute;left:0;right:0;bottom:1.2vw;padding-bottom:0;}
+  }
+
+
+  /* =====================================================================
+     HANDY-ANSICHT (nur unter 768 px). Computer, Laptop und iPad bleiben unverändert.
+     ===================================================================== */
+  @media(max-width:767px){
+    html,body{overflow-x:hidden;}
+    /* Kopfzeile: Logo links, ☰-Menü rechts, keine Menüpunkte in der Leiste */
+    nav.main-nav{display:none;}
+    .nav-row{grid-template-columns:auto 1fr auto;}
+    .menu-toggle{grid-column:3;}
+    .mobile-panel{max-height:calc(100svh - 68px);overflow-y:auto;box-shadow:0 12px 24px rgba(37,51,64,0.12);}
+    .mobile-panel a{padding:14px 0;font-size:15px;}
+    .mobile-panel a.btn-gold{color:#FFFFFF;border-bottom:0;padding:13px 26px;}
+
+    /* Erste Seite: TRAINING • COACHING • CONSULTING auf eine Zeile */
+    .intro-services{font-size:clamp(13px,3.9vw,16px);letter-spacing:0.12em;white-space:nowrap;}
+    .intro-rule{margin:12px 0 22px;}
+
+    /* Seite 2: Claim kompakter, damit die Wörter nicht einzeln umbrechen */
+    .our-focus .kicker{font-size:22px;letter-spacing:3px;}
+    .focus-claim{font-size:clamp(15px,4.3vw,19px);letter-spacing:0.04em;}
+    .focus-claim-spaced{flex-wrap:nowrap;}
+    .focus-claim-spaced{gap:6px;}
+    .focus-claim.loose{font-size:clamp(17px,4.8vw,20px);}
+    .focus-sub{font-size:clamp(15px,4.2vw,18px);}
+
+    /* Werkzeug-Bild: Spruch oben in voller Breite, Laufband mit Abstand darunter */
+    .tool-quote-inner{min-height:0;padding-top:34px;padding-bottom:26px;justify-content:center;}
+    .tool-line{width:100%;font-size:clamp(17px,5.2vw,21px);line-height:1.2;}
+    .tool-quote::after{background:linear-gradient(180deg,rgba(14,22,32,0.55) 0%,rgba(14,22,32,0.25) 55%,rgba(14,22,32,0.1) 100%);}
+    /* Seite 2 → Bergbild: kleinere Lücke */
+    .our-focus{padding-bottom:28px;}
+    .logo-refs{padding-top:28px;}
+    .tool-quote .quali-marquee{padding-bottom:24px;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);
+              mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);}
+    .quali-card{width:132px;margin-right:12px;}
+    .quali-card img{height:60px;}
+    .quali-card span{font-size:11px;}
+
+    /* Kontakt: weniger Leerraum zwischen Überschrift und Karte */
+    .kontakt-head{padding-top:30px;margin-bottom:18px;}
+    .kontakt-card{padding-bottom:0;}
+    .kontakt-card-img{flex:none;height:auto;min-height:0;aspect-ratio:1521/1158;margin-bottom:0;}
+
+    /* Fussbereich: alles linksbündig untereinander */
+    .site-footer{padding:30px 0 28px;}
+    .footer-cols{flex-direction:column;gap:26px;}
+    .footer-col,.footer-legal > div{align-items:flex-start;}
+    .footer-head{text-align:left;margin-bottom:10px;}
+    .footer-legal{gap:24px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#start" class="logo-link"><img class="logo-img" src="Bilder_website/liga-one-logo-wordmark-white.png" alt="LIGA ONE Consulting GmbH"></a>
+    <nav class="main-nav nav-links">
+      <a href="#start">HOME</a>
+      <a href="#training" class="nav-2line"><span>Business</span><span>Training</span></a>
+      <a href="#coaching" class="nav-2line"><span>Business</span><span>Coaching</span></a>
+      <a href="#methoden">METHODEN</a>
+      <a href="#projekte">PROJEKTE</a>
+      <a href="#kontakt">KONTAKT</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#kontakt" class="btn-gold header-cta">free LIVE-Workshop</a>
+      <a href="https://www.linkedin.com/in/kathrin-grajez-935718133" class="header-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn-Profil (öffnet in neuem Tab)"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="currentColor"/><path fill="#FFFFFF" class="li-glyph" d="M11.2 14.1h2.9v9.3h-2.9zM12.65 9.6a1.68 1.68 0 1 1 0 3.36 1.68 1.68 0 0 1 0-3.36zM15.9 14.1h2.78v1.27h.04c.39-.73 1.33-1.5 2.74-1.5 2.93 0 3.47 1.93 3.47 4.44v5.09h-2.9v-4.51c0-1.08-.02-2.46-1.5-2.46-1.5 0-1.73 1.17-1.73 2.38v4.59h-2.9z"/></svg></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#start">HOME</a>
+    <a href="#training">Business Training</a>
+    <a href="#coaching">Business Coaching</a>
+    <a href="#methoden">Methoden</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="btn-gold">free LIVE-Workshop</a>
+    <a href="https://www.linkedin.com/in/kathrin-grajez-935718133" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<section class="intro-hero" id="start">
+  <img class="intro-hero-img" src="Bilder_website/hero-start-bg.jpg" alt="Kathrin Grajez, Trainerin und Coach von LIGA ONE, im Vortrag">
+  <div class="wrap intro-hero-inner">
+    <div class="intro-hero-text">
+      <p class="intro-services">Training<span class="intro-dot" aria-hidden="true"></span>Coaching<span class="intro-dot" aria-hidden="true"></span>Consulting</p>
+      <span class="intro-rule" aria-hidden="true"></span>
+      <h1 class="intro-title">
+        <span class="t1">Leadership</span>
+        <span class="t2">Sales</span>
+        <span class="t4">Mental Health</span>
+      </h1>
+      <div class="intro-offer">
+        <p class="intro-offer-lead">für ein erstes Kennenlernen</p>
+        <a href="#kontakt" class="btn btn-primary intro-cta">free LIVE-Workshop mit Business Actor anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+        <p class="intro-perks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8c-1.5-3-5.5-4-5.5-1.5S10 8 12 8zM12 8c1.5-3 5.5-4 5.5-1.5S14 8 12 8z"/></svg><span>kostenlos</span><i aria-hidden="true">|</i><span>Inhouse</span><i aria-hidden="true">|</i><span>Ihre Fokusthemen</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="logo-marquee intro-marquee" aria-label="Referenzunternehmen">
+    <div class="logo-track" id="introLogoTrack"></div>
+  </div>
+</section>
+
+<section class="wide-image-section camera" id="fokus">
+  <div class="wrap">
+    <div class="wide-image">
+      <div class="focus-overlay" aria-label="Unsere Formate">
+        <div class="focus-card">
+          <img src="Bilder_website/focus-in-person-flipchart.jpg" alt="Trainerin schreibt „Leadership“ an das Flipchart, im Vordergrund Teilnehmende" style="object-position:50% 32%">
+          <div class="focus-card-text"><span class="focus-card-label">In Person</span></div>
+        </div>
+        <div class="focus-card">
+          <img src="Bilder_website/focus-one-to-one-coaching.jpg" alt="Coaching im Einzelgespräch: ein Mann erzählt lächelnd, eine Frau hört zu" style="object-position:55% 35%">
+          <div class="focus-card-text"><span class="focus-card-label">1:1</span></div>
+        </div>
+        <div class="focus-card">
+          <img src="Bilder_website/focus-online-meeting.jpg" alt="Online-Training: Videokonferenz mit sechs Teilnehmenden am Laptop" style="object-position:60% 55%">
+          <div class="focus-card-text"><span class="focus-card-label">Online</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="our-focus">
+  <div class="wrap">
+    <div class="focus-kicker-row">
+      <span class="focus-kicker-line" aria-hidden="true"></span>
+      <span class="kicker">20 Jahre</span>
+      <span class="focus-kicker-line" aria-hidden="true"></span>
+    </div>
+    <h2 class="focus-claim focus-claim-spaced"><span>Training</span><span class="focus-dot" aria-hidden="true"></span><span>Coaching</span><span class="focus-dot" aria-hidden="true"></span><span>Consulting</span></h2>
+    <p class="focus-sub">THAT&nbsp;WORKS.</p>
+    <h2 class="focus-claim loose">Results That Last<span class="focus-end-dot">.</span></h2>
+  </div>
+</section>
+
+<section class="our-focus our-focus-rest">
+  <div class="our-focus-spacer"></div>
+</section>
+
+<section class="logo-refs" aria-label="Wofür bist du hier?">
+  <div class="wide-image refs-mountain">
+    <img src="Bilder_website/3_Wof%C3%BCr_Berg.jpg" alt="Wanderer auf einem Felsen mit Bergpanorama — Sinnbild für Perspektive und Entwicklung">
+    <p class="mountain-question">Wofür bist du hier?</p>
+  </div>
+</section>
+
+<section class="section-pad training" id="training">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Business Training</span>
+      <div class="training-intro">
+        <p class="subheadline">Wir entwickeln maßgeschneiderte Trainingsformate, die Praxis-Know-how vermitteln, Verhalten verändern und zu Ihrem Unternehmen, Ihrer Kultur und Ihren konkreten Herausforderungen passen – in Präsenz, online oder als Blended-Learning-Konzept.</p>
+      </div>
+    </div>
+    <div class="grid-4 train-grid">
+      <div class="train-item">
+        <h3 class="train-title">LEADERSHIP</h3>
+        <div class="train-card train-card-reveal">
+          <img class="train-bg" src="Bilder_website/iStock-1150572097.jpg" alt="">
+          <div class="train-overlay"></div>
+          <div class="train-content">
+            <p class="train-sub train-sub-head">Mögliche Themen</p>
+            <ul class="train-list">
+              <li>Performance Leadership – Leistung wirksam steuern</li>
+              <li>First-Time Leadership</li>
+              <li>Schwierige Führungsgespräche &amp; Konfliktmanagement</li>
+              <li>Change Leadership</li>
+              <li>Coaching Leadership</li>
+              <li>Laterale &amp; hybride Führung</li>
+              <li>Decision Leadership – Entscheidungen unter Unsicherheit treffen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="train-item">
+        <h3 class="train-title">SALES</h3>
+        <div class="train-card train-card-reveal">
+          <img class="train-bg" src="Bilder_website/sales-teamwork.jpg" alt="">
+          <div class="train-overlay"></div>
+          <div class="train-content">
+            <p class="train-sub train-sub-head">Mögliche Themen</p>
+            <ul class="train-list">
+              <li>Ausbildung zum Consultant B2B/B2C</li>
+              <li>Solution &amp; Value Selling</li>
+              <li>Buying Center &amp; Complex Sales</li>
+              <li>Sales Performance &amp; Pipeline Management</li>
+              <li>Verhandlungspsychologie &amp; Value Negotiation</li>
+              <li>Strategische Gesprächsführung &amp; SPIN Selling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="train-item">
+        <h3 class="train-title">MENTAL HEALTH</h3>
+        <div class="train-card train-card-reveal">
+          <img class="train-bg" src="Bilder_website/iStock-1436940841.jpg" alt="">
+          <div class="train-overlay"></div>
+          <div class="train-content">
+            <p class="train-sub train-sub-head">Mögliche Themen</p>
+            <ul class="train-list">
+              <li>Healthy Leadership – Gesund führen</li>
+              <li>Resilienz &amp; mentale Stärke unter Druck</li>
+              <li>Burnout-Prävention &amp; Früherkennung</li>
+              <li>Change Resilience – Stabil durch Veränderung</li>
+              <li>Psychologische Sicherheit &amp; Teamresilienz</li>
+              <li>Healthy Performance – Nachhaltig leistungsfähig</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="train-item">
+        <h3 class="train-title">AI meets BUSINESS</h3>
+        <div class="train-card train-card-reveal">
+          <img class="train-bg" src="Bilder_website/ai-meets-business.jpg" alt="">
+          <div class="train-overlay"></div>
+          <div class="train-content">
+            <p class="train-sub train-sub-head">KI verstehen.<br>Prozesse verbessern.<br>Menschen mitnehmen</p>
+            <ul class="train-list">
+              <li>KI-Kompetenz im Arbeitsalltag</li>
+              <li>AI-Powered Sales</li>
+              <li>Prompt Engineering &amp; AI&nbsp;Productivity</li>
+              <li>AI Strategy &amp; Business Value</li>
+              <li>AI Leadership – Führen&nbsp;mit&nbsp;KI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="knot-quote" aria-label="Ich hatte eine Lösung, sie passte aber nicht zu meinem Problem.">
+  <img src="Bilder_website/baum_roter_Knoten_web.jpg" alt="Roter Seilknoten in Herzform an einem Ast">
+  <div class="wrap knot-quote-inner">
+    <p class="knot-line knot-line-1">Ich hatte eine Lösung,</p>
+    <p class="knot-line knot-line-2">sie passte aber nicht<br>zu meinem Problem.</p>
+  </div>
+</section>
+
+<section class="section-pad" id="coaching">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Business Coaching</span>
+      <p class="subheadline">Coaching bietet einen strukturierten Raum, um Ziele zu klären, innere Blockaden zu erkennen und konkrete nächste Schritte zu entwickeln.</p>
+    </div>
+
+    <div class="coach-cards">
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/iStock-1376177420-2.jpg" alt="" loading="lazy">
+        <div class="coach-card-text">
+          <h4>Executive &amp; Leadership Coaching</h4>
+          <p>Führungsverhalten &amp; Wirkung reflektieren, anspruchsvolle Führungssituationen lösen.</p>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/coaching-change-chance.jpg" alt="" loading="lazy">
+        <div class="coach-card-text">
+          <h4>Change &amp; Transformation Coaching</h4>
+          <p>Umstrukturierungen, Veränderungen und Unsicherheit souverän bewältigen.</p>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/coaching-knoten.jpg" alt="" loading="lazy" style="object-position:50% 55%">
+        <div class="coach-card-text">
+          <h4>Konflikt- &amp; Kommunikationscoaching</h4>
+          <p>Schwierige Beziehungen, Machtkonflikte &amp; kritische Gespräche professionell klären.</p>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/zwei_stuehle_wasser.jpg" alt="" loading="lazy" style="object-position:50% 38%">
+        <div class="coach-card-text">
+          <h4>Resilienz &amp; Mental Performance</h4>
+          <p>Unter hoher Belastung handlungsfähig bleiben, Stress regulieren, Grenzen setzen.</p>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/work_life_brille_card.jpg" alt="" loading="lazy">
+        <div class="coach-card-text">
+          <h4>Performance &amp; Selbstführung</h4>
+          <p>Prioritäten konsequent setzen, Reflektion persönliche Leistung &amp; Arbeitsroutinen.</p>
+        </div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-card-img" src="Bilder_website/iStock-482949909_super.jpeg" alt="" loading="lazy" style="object-position:50% 55%">
+        <div class="coach-card-text">
+          <h4>Karriere- &amp; Transition Coaching</h4>
+          <p>Berufliche Neuorientierung, Rollenwechsel, Karrierebrüche / nächsten Karriereschritt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tool-quote" aria-label="Wer einen Hammer als einziges Werkzeug hat, für den sieht alles nach einem Nagel aus.">
+  <img src="Bilder_website/werkzeug_web.jpg" alt="Werkzeuge auf einem Holztisch: Hammer, Zollstock, Wasserwaage, Winkel und Rohrzange">
+  <div class="wrap tool-quote-inner">
+    <p class="tool-line">Wer einen Hammer<br>als einziges Werkzeug hat,<br>für den sieht alles<br>nach einem Nagel aus.</p>
+  </div>
+  <div class="quali-marquee" aria-label="Auszug der Qualifizierungen">
+    <div class="quali-track" id="qualiTrack"></div>
+  </div>
+</section>
+
+<section class="section-pad" id="methoden" style="background:var(--bg-white);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Methoden</span>
+      <p class="subheadline">Wir arbeiten mit Formaten, die Reflexion, Praxis und Transfer verbinden.</p>
+      <p class="body-text methoden-intro">Unsere Methoden sprechen mehrere Sinne an: Teilnehmende hören nicht nur zu, sondern erleben, üben, reflektieren und übertragen das Gelernte direkt auf reale Situationen. Dadurch entsteht nachhaltige Verhaltensänderung – nicht durch Theorie allein, sondern durch Erfahrung, Wiederholung und konkrete Anwendung.</p>
+    </div>
+
+    <div class="grid-methods">
+      <div class="media-card">
+        <div class="thumb"><img src="Bilder_website/seminarschauspieler.jpg" alt="Trainingssituation mit Seminarschauspieler im Gespräch am Tisch"></div>
+        <div class="body">
+          <h3 class="h4-card">Seminarschauspieler</h3>
+          <p class="body-text">Spiegelung des eigenen Verhaltens, realistische Trainingssituationen mit professionellem Feedback und hoher Praxisnähe.</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <div class="thumb"><img src="Bilder_website/systembrett_praesenz_online.jpg" alt="Systembrett in Präsenz mit Holzfiguren vor Wasserhintergrund und darunter ein Online-Systembrett auf dem Laptop"></div>
+        <div class="body">
+          <h3 class="h4-card">Systembrett <span class="card-note">Präsenz &amp; Online</span></h3>
+          <p class="body-text">Komplexe Situationen sichtbar machen, Beziehungen ordnen, Projektstatus analysieren und neue Handlungsoptionen entwickeln.</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <div class="thumb"><img src="Bilder_website/in_person_teamuebung.jpg" alt="Teamübung im Seminarraum: Teilnehmende mit Augenbinden lösen gemeinsam eine Aufgabe mit Seilen"></div>
+        <div class="body">
+          <h3 class="h4-card">Lernen durch Erleben</h3>
+          <p class="body-text">Praxisnahe Übungen, Simulationen und Reflexion machen zentrale Themen wie Führung, Sales, Kommunikation und Zusammenarbeit erlebbar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projekte-quote" aria-label="Projekte im Fokus">
+  <img src="Bilder_website/projekte-kamera.jpg" alt="Frau fotografiert mit einer Spiegelreflexkamera direkt in die Linse – Sinnbild für den Fokus auf Projekte">
+  <div class="wrap projekte-quote-inner">
+    <p class="projekte-line">Projekte<br>im Fokus</p>
+  </div>
+</section>
+
+<section class="section-pad" id="projekte">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Auszug unserer Projekte</span>
+      <p class="subheadline">Wir entwickeln und realisieren maßgeschneiderte Lern- und Entwicklungsprogramme für Führungskräfte, Vertriebsteams und Organisationen im Wandel.</p>
+      <p class="body-text projekte-intro">Dabei verbinden wir moderne Lernarchitekturen, LMS-gestütztes Blended Learning und digitale Lösungen mit psychologisch fundierten Trainingsmethoden, Coaching und realistischen Praxissimulationen mit einem Business Actor. In enger Zusammenarbeit mit internen Fachtrainern verbinden wir fachliche Expertise und moderne Trainingsmethodik.</p>
+      <p class="body-text projekte-intro">Unser Fokus liegt nicht auf einzelnen Trainingsmaßnahmen, sondern auf messbarem Kompetenzaufbau, nachhaltiger Verhaltensänderung und der konsequenten Umsetzung im Arbeitsalltag.</p>
+    </div>
+
+    <div class="projekt-grid">
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/vodafone.png" alt="Vodafone">
+        <ul class="projekt-tags"><li>15 Jahre</li><li class="is-highlight">IHK-Zertifizierung</li></ul>
+        <h3>Konzeption, Entwicklung und Durchführung B2B Außendienst Ausbildung im Telekommunikationsvertrieb</h3>
+        <p>15 Jahre Durchführung der B2B Sales Ausbildung im Telekommunikationsvertrieb incl. der Entwicklung &amp; Implementierung zur <strong>Zertifizierung bei der IHK Düsseldorf</strong></p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo projekt-logo-square" src="assets/references/nissan.png" alt="Nissan">
+        <ul class="projekt-tags"><li>7 Jahre</li><li>DE · AT · CH</li></ul>
+        <h3>Konzeption, Entwicklung und Durchführung der Qualifizierung zum „Geprüften Automobilverkäufer/in“ GAV</h3>
+        <p>7 Jahre Durchführung und Konzeption der Qualifizierung zum GAV (geprüfter Automobilverkäufer/in) in Deutschland incl. einer adaptierten Ausbildung in Österreich und Schweiz</p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/athlon.png" alt="Athlon">
+        <ul class="projekt-tags"><li>2 Jahre</li><li>Coaching</li></ul>
+        <h3>Management-Coaching &amp; Organisationsentwicklung</h3>
+        <p>Begleitung des Management-Teams in einem ganzheitlichen Entwicklungsprozess mit Fokus auf Führungswirksamkeit, gemeinsame Ausrichtung und nachhaltige Umsetzung im Unternehmensalltag.</p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/vodafone.png" alt="Vodafone">
+        <ul class="projekt-tags"><li>LMS</li><li>Blended Learning</li></ul>
+        <p class="projekt-formel">LMS + Microlearning + Praxis + Reflexion + Transfer = Wirkung</p>
+        <h3>Konzeption, Aufbau und Durchführung einer LMS-basierten Blended-Learning-Sales-Qualifizierung für den B2B-Vertrieb.</h3>
+        <p>Kombination aus digitalen Lernmodulen, Videos, Selbstlernprojekten, Reflexion, Wissenstests und praxisnahen Transferformaten wie z.&nbsp;B. Business Actor &amp; Training on the Job.</p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/1und1-versatel.png" alt="1&amp;1 Versatel">
+        <ul class="projekt-tags"><li>Vertriebssteuerung</li><li>KPI</li></ul>
+        <h3>KPI-basierte Vertriebssteuerung</h3>
+        <p>Konzeption und Implementierung eines maßgeschneiderten Vertriebssteuerungstools zur Unterstützung einer strukturierten, KPI-gestützten Vertriebsplanung und zur gezielten Verbesserung der Umsetzung im Vertriebsalltag.</p>
+      </article>
+      <article class="projekt-card projekt-col3">
+        <img class="projekt-logo" src="assets/references/athlon.png" alt="Athlon">
+        <ul class="projekt-tags"><li>Sales Leadership</li><li>KPI</li></ul>
+        <h3>Modulare Sales Leadership Qualifizierung</h3>
+        <p>Konzeption und Durchführung eines modularen Entwicklungsprogramms für Teamleiter im Vertrieb. Schwerpunkte waren wirksame Mitarbeiterführung, vertriebsorientiertes Coaching, KPI-gestützte Leistungssteuerung und die gezielte Weiterentwicklung der Teamperformance.</p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/vodafone.png" alt="Vodafone">
+        <ul class="projekt-tags"><li>Train the Trainer</li><li>Blended Learning</li></ul>
+        <h3>Train the Trainer: Methodenkompetenz &amp; Blended Learning</h3>
+        <p>Praxisorientierte Qualifizierung interner Trainer und Fachexperten in modernen Trainingsmethoden und Blended-Learning-Konzepten. Die enge Verzahnung mit den jeweiligen Fachqualifizierungen stellte sicher, dass fachliche Inhalte und methodisch-didaktische Kompetenzen Hand in Hand entwickelt und nachhaltig in der Trainingspraxis umgesetzt wurden.</p>
+      </article>
+      <article class="projekt-card">
+        <img class="projekt-logo" src="assets/references/perinova-hd.png" alt="Perinova IT-Management">
+        <ul class="projekt-tags"><li>Management</li><li>Leadership</li></ul>
+        <h3>Leadership Development &amp; kundenorientierte Kommunikation</h3>
+        <p>Ganzheitliches Entwicklungsprogramm für Management, Nachwuchsführungskräfte und Softwareentwickler mit Fokus auf:</p>
+        <ul class="projekt-points">
+          <li><strong>Management-Coaching:</strong> Führungswirksamkeit und Organisationsentwicklung</li>
+          <li><strong>Leadership Development:</strong> Qualifizierung und Entwicklung von Nachwuchsführungskräften</li>
+          <li><strong>Customer Communication:</strong> Zielgruppengerechte Gesprächsführung, verständliche Vermittlung komplexer technischer Lösungen und professionelle Kundenkommunikation</li>
+        </ul>
+      </article>
+      <article class="projekt-card projekt-col3">
+        <img class="projekt-logo" src="assets/references/athlon.png" alt="Athlon">
+        <ul class="projekt-tags"><li>8 Jahre</li><li>Training</li><li>Coaching</li></ul>
+        <h3>Modulare Qualifizierung für Sales Account Manager im Außendienst</h3>
+        <p>Konzeption und Durchführung eines modularen Qualifizierungsprogramms mit Assessment Centern zu Beginn und zum Abschluss zur systematischen Erfassung und Bewertung der Kompetenzentwicklung.</p>
+        <p>Im Fokus standen die gezielte Weiterentwicklung vertrieblicher Kompetenzen, professionelle Gesprächsführung, kundenorientierter Lösungsvertrieb sowie der nachhaltige Transfer des Erlernten in die tägliche Vertriebspraxis.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="kontakt-banner">
+    <img src="assets/kontakt/schuhe-socken.jpg" alt="Braune Lederschuhe mit bunt gestreiften Socken — der erste Schritt">
+    <h2 class="step-one" aria-label="Step One"><span class="step-word" aria-hidden="true">Step</span><span class="one-word" aria-hidden="true"><span class="one-o">O<span class="one-1">1</span></span>NE</span></h2>
+  </div>
+
+  <div class="wrap">
+
+    <div class="section-head kontakt-head">
+      <span class="kicker">Kontakt</span>
+    </div>
+
+    <div class="kontakt-grid">
+      <aside class="kontakt-card">
+        <img class="kontakt-logo" src="assets/kontakt/liga-one-logo.png" alt="LIGA ONE Consulting GmbH">
+        <img class="kontakt-card-img" src="Bilder_website/kontakt-schluessel.jpg" alt="Viele Menschen formen gemeinsam einen Schlüssel — der Schlüssel liegt im Menschen selbst">
+      </aside>
+
+      <form class="kontakt-form" id="kontaktForm" action="/api/kontakt" method="post" novalidate>
+        <h3 class="kf-title">L<span class="kf-bang">!</span>GA ONE kennenlernen</h3>
+        <p class="kf-intro">Wir freuen uns über Ihre Anfrage!<br>Wählen Sie bitte Ihr Anliegen. Wir melden uns zur Abstimmung der nächsten Schritte innerhalb von 24 Stunden.</p>
+
+        <fieldset class="kf-choice">
+          <legend class="kf-sr">Ihr Anliegen</legend>
+          <label class="kf-radio"><input type="radio" name="anfrageart" value="workshop" checked> Kostenlosen LIVE-Workshop anfragen</label>
+          <label class="kf-radio"><input type="radio" name="anfrageart" value="allgemein"> Allgemeine Anfrage / Erstgespräch</label>
+        </fieldset>
+
+        <div class="kf-fields">
+          <label class="kf-field"><span>Unternehmen *</span><input type="text" name="unternehmen" autocomplete="organization" maxlength="200" required></label>
+          <label class="kf-field"><span>Kontaktperson * <small>(Vor- und Nachname)</small></span><input type="text" name="kontaktperson" autocomplete="name" maxlength="200" required></label>
+          <label class="kf-field"><span>Geschäftliche E-Mail *</span><input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+          <label class="kf-field"><span>Ihr Anliegen / Ihre Fokusthemen *</span><textarea name="anliegen" rows="4" maxlength="5000" placeholder="Leadership, Sales, Change, Mental Health ..." required></textarea></label>
+        </div>
+
+        <!-- Spam-Schutz: unsichtbares Feld (darf leer bleiben) und Zeitstempel -->
+        <div class="kf-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="ts" value="">
+
+        <label class="kf-optin"><input type="checkbox" name="datenschutz" value="1" required> <span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzhinweise</a> zur Verarbeitung meiner Anfrage gelesen.</span></label>
+        <button type="submit" class="kf-submit" disabled>ANFRAGE SENDEN →</button>
+        <p class="kf-status" id="kontaktStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="footer-cols">
+    <div class="footer-col">
+      <h2 class="footer-head">Adresse</h2>
+      <p class="footer-text"><strong class="footer-brand">L<span class="footer-bang">!</span>GA ONE</strong> Consulting GmbH<br>Mostereiplatz 4<br>9322 Egnach | Schweiz</p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-head">Kontakt</h2>
+      <ul class="footer-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.4 6l8.6 7 8.6-7"/></svg><a href="mailto:info@liga-one-gmbh.ch">info@liga-one-gmbh.ch</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><a href="tel:+41715757911">+41 (0) 71 57 57 911</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-legal">
+      <div>
+        <h2 class="footer-head">Rechtliches</h2>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+      <figure class="footer-cert">
+        <img class="footer-tuev" src="Bilder_website/tuev-zertifikat.jpg" alt="TÜV Rheinland zertifiziert – Geprüfte Qualifikation, gültig bis 11.05.2029, ID 0217466402" width="800" height="295">
+        <figcaption>Kathrin Grajez<br>E-Trainer:in mit TÜV Rheinland geprüfter Qualifikation</figcaption>
+      </figure>
+    </div>
+  </div></div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const panel = document.getElementById('mobilePanel');
+  toggle.addEventListener('click', () => panel.classList.toggle('open'));
+
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-panel a');
+  const headerEl = document.querySelector('header');
+
+  // Anzeigebereiche je Menüpunkt: Start-Element (oben bündig unter der Kopfzeile) bis Ende des Abschnitts
+  const navZones = {
+    start: ['#start', '#start'],
+    training: ['.refs-mountain', '#training'],  // beginnt beim Bergbild
+    coaching: ['.knot-quote', '#coaching'],     // beginnt beim Bild mit dem roten Knoten
+    methoden: ['.tool-quote', '#methoden'],     // beginnt beim Werkzeugkoffer
+    projekte: ['.projekte-quote', '#projekte']  // beginnt beim Kamera-Bild
+  };
+  function zoneRect(id) {
+    const [startSel, endSel] = navZones[id] || ['#' + id, '#' + id];
+    const start = document.querySelector(startSel);
+    const end = document.querySelector(endSel);
+    if (!start || !end) return null;
+    return { top: start.getBoundingClientRect().top, bottom: end.getBoundingClientRect().bottom };
+  }
+  const navIds = Array.from(new Set(Array.from(navLinks)
+    .map(a => a.getAttribute('href').slice(1))
+    .filter(id => document.getElementById(id))));
+
+  function setActive(id){
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  let navLockUntil = 0;
+  navLinks.forEach(a => a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    let r = zoneRect(id);
+    panel.classList.remove('open');
+    if (!r) return;
+    e.preventDefault();
+    // Bereich oben bündig direkt unter die Kopfzeile setzen
+    const headerH = headerEl ? headerEl.offsetHeight : 0;
+    window.scrollTo({ top: Math.max(0, window.scrollY + r.top - headerH), behavior: 'smooth' });
+    setActive(id);
+    navLockUntil = Date.now() + 1200;
+  }));
+  // Sperre verlängern, solange das Smooth-Scrolling nach einem Klick noch läuft
+  window.addEventListener('scroll', () => {
+    if (Date.now() < navLockUntil) navLockUntil = Math.max(navLockUntil, Date.now() + 250);
+  }, { passive: true });
+
+  // aktiven Menüpunkt anhand einer Prüflinie knapp über der Bildschirmmitte bestimmen
+  let navTicking = false;
+  function updateActiveNav() {
+    navTicking = false;
+    if (Date.now() < navLockUntil) return;
+    const headerH = headerEl ? headerEl.offsetHeight : 0;
+    const probe = headerH + (window.innerHeight - headerH) * 0.45;
+    const hit = navIds.find(id => {
+      const r = zoneRect(id);
+      return r && r.top <= probe && r.bottom >= probe;
+    });
+    setActive(hit || '');
+  }
+  window.addEventListener('scroll', () => {
+    if (!navTicking) { navTicking = true; requestAnimationFrame(updateActiveNav); }
+  }, { passive: true });
+  window.addEventListener('resize', updateActiveNav);
+  updateActiveNav();
+
+  /* Referenzen: zentrale Logo-Liste (Dateien in assets/references/) */
+  const referenceLogos = [
+    { name: "1&1 Versatel", src: "assets/references/1und1-versatel.png" },
+    { name: "Athlon", src: "assets/references/athlon.png" },
+    { name: "Der Beck", src: "assets/references/der-beck.png" },
+    { name: "Erlanger Stadtwerke", src: "assets/references/erlanger-stadtwerke.png" },
+    { name: "KION Group", src: "assets/references/kion-group.png" },
+    { name: "Linde Material Handling", src: "assets/references/linde.png" },
+    { name: "ems", src: "assets/references/ems.svg" },
+    { name: "Quehenberger Logistics", src: "assets/references/quehenberger.svg" },
+    { name: "Nissan", src: "assets/references/nissan.png" },
+    { name: "Porsche Bank", src: "assets/references/porsche-bank.png" },
+    { name: "numbat", src: "assets/references/numbat.png" },
+    { name: "Perinova IT-Management", src: "assets/references/perinova-hd.png" },
+    { name: "Schön Klinik", src: "assets/references/schoen-klinik.svg" },
+    { name: "VIER", src: "assets/references/vier.png" },
+    { name: "Vodafone", src: "assets/references/vodafone.png" }
+  ];
+  // Logo-Laufband befüllen
+  function renderLogoTrack(track, logos) {
+    if (!track) return;
+    // Liste doppelt rendern, damit der Loop bei -50% nahtlos weiterläuft
+    [...logos, ...logos].forEach((logo, i) => {
+      const card = document.createElement('div');
+      card.className = 'logo-card';
+      if (i >= logos.length) card.setAttribute('aria-hidden', 'true');
+      const img = document.createElement('img');
+      img.src = logo.src;
+      img.alt = i >= logos.length ? '' : logo.name;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      // optisch angleichen: breite Logos niedriger, kompakte Logos voll hoch
+      img.addEventListener('load', () => {
+        const ratio = img.naturalWidth / img.naturalHeight || 1;
+        const f = Math.max(0.55, Math.min(1, Math.sqrt(1.8 / ratio)));
+        img.style.height = `calc(var(--logo-h) * ${f.toFixed(3)})`;
+      });
+      card.appendChild(img);
+      track.appendChild(card);
+    });
+  }
+  renderLogoTrack(document.getElementById('introLogoTrack'), referenceLogos);
+  /* Qualifizierungen (aus liga-one-gmbh.ch übernommen, Dateien in assets/qualifikationen/) */
+  const qualifikationen = [
+    ['tuev-e-trainer.jpg', 'E-Trainer:in TÜV Rheinland'],
+    ['01-43443844.jpg', 'Systemischer Coach & Organisationsentwicklung'],
+    ['02.jpg', 'zertifizierter Resilienz Trainer'],
+    ['03.jpg', 'Systemische Business Ausbildung'],
+    ['15.jpg', 'Ausbildung zum Agilen Lernbegleiter'],
+    ['04.jpg', 'MediatorIn Wirtschaft & Familie'],
+    ['01-43443844.jpg', 'Hypnosystemischer Coach'],
+    ['05.jpg', 'Hypnosetherapeutin / Hypnosecoach'],
+    ['06-0b845045.jpg', 'National Guild of Hypnotists'],
+    ['07.jpg', 'Trainer & Coach zur methodischen Arbeit mit Seminarschauspielern'],
+    ['03.jpg', 'Mobbingberatung'],
+    ['08.jpg', 'zertifizierter Wingwave Coach'],
+    ['09.jpg', 'zertifizierter Virtual Reality Trainer'],
+    ['03.jpg', 'Systemische Strukturaufstellungen'],
+    ['10b.jpg', 'zertifizierter Trainer'],
+    ['11.jpg', 'zertifizierter Trainer'],
+    ['12.jpg', 'zertifizierter wingwave Online Coach'],
+    ['emdr-siegel.jpg', 'Pragmatische Traumatherapeutin (VDH/DGMT/DEMDRG)'],
+    ['13.jpg', 'Psychologischer Berater'],
+    ['14.jpg', 'zertifizierter NLP Master'],
+    ['emdr-siegel.jpg', 'EMDR Coach (VDH/DGMT/DEMDRG)']
+  ];
+  const qualiTrack = document.getElementById('qualiTrack');
+  if (qualiTrack) {
+    [0, 1].forEach(round => qualifikationen.forEach(([file, label]) => {
+      const card = document.createElement('div');
+      card.className = 'quali-card';
+      if (round) card.setAttribute('aria-hidden', 'true');
+      const img = document.createElement('img');
+      img.src = 'assets/qualifikationen/' + file;
+      img.alt = round ? '' : label;
+      img.loading = 'lazy';
+      const span = document.createElement('span');
+      span.textContent = label;
+      card.append(img, span);
+      qualiTrack.appendChild(card);
+    }));
+  }
+  // Kontaktformular: Versand per POST an die Vercel-Funktion /api/kontakt (serverseitige Prüfung + Mailversand), kein Mailprogramm
+  const kontaktForm = document.getElementById('kontaktForm');
+  if (kontaktForm) {
+    const status = document.getElementById('kontaktStatus');
+    const submitBtn = kontaktForm.querySelector('.kf-submit');
+    const required = Array.from(kontaktForm.querySelectorAll('[required]'));
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const isValid = el => el.type === 'checkbox' ? el.checked
+      : el.type === 'email' ? emailRe.test(el.value.trim())
+      : el.value.trim() !== '';
+    const updateSubmit = () => { submitBtn.disabled = !required.every(isValid); };
+    kontaktForm.elements.ts.value = Date.now();
+    required.forEach(el => {
+      el.addEventListener('input', updateSubmit);
+      el.addEventListener('change', updateSubmit);
+      el.addEventListener('blur', () => {
+        const box = el.closest('.kf-field');
+        if (box) box.classList.toggle('is-invalid', el.value !== '' && !isValid(el));
+      });
+    });
+    updateSubmit();
+
+    kontaktForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!required.every(isValid)) { updateSubmit(); return; }
+      submitBtn.disabled = true;
+      status.classList.remove('is-error');
+      status.textContent = 'Ihre Anfrage wird gesendet …';
+      try {
+        const daten = Object.fromEntries(new FormData(kontaktForm));
+        const res = await fetch('/api/kontakt', {
+          method: 'POST', body: JSON.stringify(daten),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'send');
+        kontaktForm.reset();
+        kontaktForm.elements.ts.value = Date.now();
+        kontaktForm.classList.add('is-sent');
+        status.textContent = 'Vielen Dank für Ihre Anfrage. Wir melden uns zur Abstimmung der nächsten Schritte innerhalb von 24 Stunden.';
+      } catch (err) {
+        status.classList.add('is-error');
+        status.textContent = (err && err.message && err.message !== 'send' && err.message !== 'Failed to fetch')
+          ? err.message
+          : 'Ihre Anfrage konnte leider nicht gesendet werden. Bitte versuchen Sie es in einem Moment erneut oder schreiben Sie uns an info@liga-one-gmbh.ch. Ihre Eingaben bleiben erhalten.';
+      } finally {
+        updateSubmit();
+      }
+    });
+
+    // LIVE-Workshop-Buttons (Kopfzeile, Handy-Menü, Startseite): Workshop vorauswählen und direkt zum Formular
+    document.querySelectorAll('.header-cta, .mobile-panel .btn-gold, .intro-cta').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        kontaktForm.querySelector('input[name="anfrageart"][value="workshop"]').checked = true;
+        if (typeof panel !== 'undefined' && panel) panel.classList.remove('open');
+        const headerH = headerEl ? headerEl.offsetHeight : 0;
+        window.scrollTo({ top: window.scrollY + kontaktForm.getBoundingClientRect().top - headerH - 24, behavior: 'smooth' });
+      });
+    });
+  }
+  // Business-Training-Karten: erst nur Bilder, dann einmal nacheinander (links → rechts) Text ein- und wieder ausblenden
+  const trainGrid = document.querySelector('.train-grid');
+  if (trainGrid) {
+    const cards = Array.from(trainGrid.querySelectorAll('.train-card-reveal'));
+    const SHOW = 2600;   // so lange bleibt der Text pro Karte sichtbar
+    const STEP = 2900;   // Abstand bis zur nächsten Karte
+    const gridObserver = new IntersectionObserver((entries) => {
+      if (!entries.some(e => e.isIntersecting)) return;
+      gridObserver.disconnect();
+      cards.forEach((card, i) => {
+        setTimeout(() => card.classList.add('is-showing'), 1200 + i * STEP);
+        setTimeout(() => card.classList.remove('is-showing'), 1200 + i * STEP + SHOW);
+      });
+      setTimeout(() => trainGrid.classList.add('is-done'), 1200 + cards.length * STEP);
+    }, { threshold: 0.4 });
+    gridObserver.observe(trainGrid);
+  }
+  // Kontaktkarte: Bildunterkante bündig mit der Unterkante des „Absenden“-Buttons
+  const kontaktCard = document.querySelector('.kontakt-card');
+  const kontaktSubmit = document.querySelector('.kf-submit');
+  function alignKontaktImage() {
+    if (!kontaktCard || !kontaktSubmit) return;
+    if (window.innerWidth < 900) { kontaktCard.style.removeProperty('--kc-bottom'); return; }
+    const gap = kontaktCard.getBoundingClientRect().bottom - kontaktSubmit.getBoundingClientRect().bottom;
+    kontaktCard.style.setProperty('--kc-bottom', Math.max(0, Math.round(gap)) + 'px');
+  }
+  window.addEventListener('load', alignKontaktImage);
+  window.addEventListener('resize', alignKontaktImage);
+</script>
+
+</body>
+</html>
