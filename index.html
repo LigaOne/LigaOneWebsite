@@ -791,7 +791,7 @@
      HANDY-ANSICHT (nur unter 768 px). Computer, Laptop und iPad bleiben unverändert.
      ===================================================================== */
   @media(max-width:767px){
-    html,body{overflow-x:hidden;}
+    html{overflow-x:clip;}
     /* Kopfzeile: Logo links, ☰-Menü rechts, keine Menüpunkte in der Leiste */
     nav.main-nav{display:none;}
     .nav-row{grid-template-columns:auto 1fr auto;}
@@ -825,6 +825,25 @@
     .quali-card{width:132px;margin-right:12px;}
     .quali-card img{height:60px;}
     .quali-card span{font-size:11px;}
+
+    /* Projekte-Bild: Schrift unten rechts */
+    .projekte-quote-inner{align-items:flex-end;padding-bottom:30px;}
+
+    /* Startseite: Claim oben über volle Breite, Frau rechts, Leadership/Sales/Mental Health links daneben */
+    .intro-hero{position:relative;display:block;}
+    .intro-hero-img{
+      position:absolute;top:58px;right:0;width:58%;height:310px;max-width:none;
+      object-fit:cover;object-position:86% 8%;
+      -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to bottom,#000 78%,transparent 100%);
+              mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to bottom,#000 78%,transparent 100%);
+      -webkit-mask-composite:source-in;mask-composite:intersect;
+    }
+    .intro-hero-inner{position:relative;padding-top:20px;padding-bottom:24px;}
+    .intro-rule{margin:10px 0 0;}
+    .intro-title{position:relative;z-index:1;margin-top:34px;min-height:248px;font-size:clamp(25px,7.4vw,31px);gap:0.28em;}
+    .intro-title .t2{margin-left:0.7em;}
+    .intro-title .t4{margin-left:1.4em;white-space:normal;max-width:5.2em;line-height:1.05;}
+    .intro-offer{margin-top:22px;}
 
     /* Kontakt: weniger Leerraum zwischen Überschrift und Karte */
     .kontakt-head{padding-top:30px;margin-bottom:18px;}
@@ -1324,8 +1343,8 @@
   let navLockUntil = 0;
   navLinks.forEach(a => a.addEventListener('click', (e) => {
     const id = a.getAttribute('href').slice(1);
-    let r = zoneRect(id);
     panel.classList.remove('open');
+    let r = zoneRect(id);
     if (!r) return;
     e.preventDefault();
     // Bereich oben bündig direkt unter die Kopfzeile setzen
